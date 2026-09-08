@@ -1,0 +1,168 @@
+{
+  "date": "2026-09-08T03:32:07.547Z",
+  "viewports": [
+    {
+      "width": 320,
+      "flow": "passed",
+      "choices": 10,
+      "gallery": "passed",
+      "keyboard": "passed",
+      "editing": "passed",
+      "whatsapp": "passed",
+      "layout": "passed"
+    },
+    {
+      "width": 360,
+      "flow": "passed",
+      "choices": 10,
+      "gallery": "passed",
+      "keyboard": "passed",
+      "editing": "passed",
+      "whatsapp": "passed",
+      "layout": "passed"
+    },
+    {
+      "width": 390,
+      "flow": "passed",
+      "choices": 10,
+      "gallery": "passed",
+      "keyboard": "passed",
+      "editing": "passed",
+      "whatsapp": "passed",
+      "layout": "passed"
+    },
+    {
+      "width": 430,
+      "flow": "passed",
+      "choices": 10,
+      "gallery": "passed",
+      "keyboard": "passed",
+      "editing": "passed",
+      "whatsapp": "passed",
+      "layout": "passed"
+    },
+    {
+      "width": 768,
+      "flow": "passed",
+      "choices": 10,
+      "gallery": "passed",
+      "keyboard": "passed",
+      "editing": "passed",
+      "whatsapp": "passed",
+      "layout": "passed"
+    },
+    {
+      "width": 1024,
+      "flow": "passed",
+      "choices": 10,
+      "gallery": "passed",
+      "keyboard": "passed",
+      "editing": "passed",
+      "whatsapp": "passed",
+      "layout": "passed"
+    },
+    {
+      "width": 1440,
+      "flow": "passed",
+      "choices": 10,
+      "gallery": "passed",
+      "keyboard": "passed",
+      "editing": "passed",
+      "whatsapp": "passed",
+      "layout": "passed"
+    }
+  ],
+  "accessibility": [
+    {
+      "width": 390,
+      "label": "intro",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "gallery dialog",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "project",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "theme",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "budget",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "details",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "result",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "intro",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "gallery dialog",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "project",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "theme",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "budget",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "details",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "result",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failedResources": [],
+  "canceledRequests": [],
+  "outboundRequests": [],
+  "screenshots": [
+    ".cache/quiz-390-intro.png",
+    ".cache/quiz-390-gallery.png",
+    ".cache/quiz-390-project.png",
+    ".cache/quiz-390-theme.png",
+    ".cache/quiz-390-budget.png",
+    ".cache/quiz-390-details.png",
+    ".cache/quiz-390-result.png",
+    ".cache/quiz-1440-intro.png",
+    ".cache/quiz-1440-gallery.png",
+    ".cache/quiz-1440-project.png",
+    ".cache/quiz-1440-theme.png",
+    ".cache/quiz-1440-budget.png",
+    ".cache/quiz-1440-details.png",
+    ".cache/quiz-1440-result.png"
+  ],
+  "selectionOnlyFlow": "passed; only name typed"
+}

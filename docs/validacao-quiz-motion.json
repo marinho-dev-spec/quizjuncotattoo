@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-08T03:32:29.614Z",
+  "checks": [
+    {
+      "width": 390,
+      "continuousStrip": "passed",
+      "fullPhotos": "passed",
+      "seamlessLoop": "passed",
+      "noPauseControls": "passed",
+      "hoverKeepsMoving": "passed",
+      "tattooRain": "passed",
+      "smallSymbols": "passed",
+      "reducedMotion": "passed",
+      "modal": "passed",
+      "quiz": "passed"
+    },
+    {
+      "width": 1440,
+      "continuousStrip": "passed",
+      "fullPhotos": "passed",
+      "seamlessLoop": "passed",
+      "noPauseControls": "passed",
+      "hoverKeepsMoving": "passed",
+      "tattooRain": "passed",
+      "smallSymbols": "passed",
+      "reducedMotion": "passed",
+      "modal": "passed",
+      "quiz": "passed"
+    }
+  ],
+  "errors": []
+}
