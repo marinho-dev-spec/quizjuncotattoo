@@ -56,7 +56,7 @@ const mime = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript
       const calls = async eventName => page.evaluate(name => window.__metaCalls.filter(call => call[0] === 'trackSingle' && call[2] === name), eventName);
       assert.equal((await calls('PageView')).length, 1);
       assert.equal((await calls('Contact')).length, 0);
-      await page.locator('[data-start]').click();
+      await page.locator('[data-start]').first().click();
       for (let step = 0; step < 10; step++) {
         await page.locator('input[type=radio]').first().check();
         await page.locator('#next').click();

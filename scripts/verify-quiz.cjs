@@ -66,7 +66,7 @@ const otherNotes = { theme: ['themeNote', 'Homenagem ao avô & família'], place
       const response = await page.goto(base + '/quiz', { waitUntil: 'networkidle' });
       assert.equal(response.status(), 200);
       assert.match(await page.locator('meta[name=robots]').getAttribute('content'), /noindex/);
-      assert.deepEqual(await page.locator('script[src]').evaluateAll(scripts => scripts.map(s => new URL(s.src).pathname)), ['/quiz/quiz.js']);
+      assert.deepEqual(await page.locator('script[src]').evaluateAll(scripts => scripts.map(s => new URL(s.src).pathname)), ['/quiz/meta-pixel.js', '/quiz/quiz.js']);
       assert.equal(await page.locator('.motion-control,#mobileMenu,.brand-pattern').count(), 0, 'standalone document');
       assert.equal(await page.locator('.project-group').first().locator('button').count(), 6, 'six original project photographs');
       assert.equal(await page.locator('#background-toggle,#gallery-toggle').count(), 0, 'no pause controls');
@@ -92,7 +92,7 @@ const otherNotes = { theme: ['themeNote', 'Homenagem ao avô & família'], place
       assert.equal(await page.locator('#project-dialog').evaluate(el => el.open), false);
       assert.equal(await page.locator('#gallery-open').evaluate(el => el === document.activeElement), true);
       assert.equal(await page.evaluate(() => document.body.style.overflow), '');
-      await page.locator('[data-start]').click();
+      await page.locator('[data-start]').first().click();
       assert.equal(await page.locator('#quiz').isVisible(), true);
       assert.equal(await page.locator('#question-title').evaluate(el => el === document.activeElement), true);
       await page.locator('#next').click();
@@ -144,7 +144,7 @@ const otherNotes = { theme: ['themeNote', 'Homenagem ao avô & família'], place
       await page.locator('input[value=first]').check();
       await page.locator('#back').click();
       assert.equal(await page.locator('#intro').isVisible(), true);
-      await page.locator('[data-start]').click();
+      await page.locator('[data-start]').first().click();
       assert.equal(await page.locator('input[value=first]').isChecked(), true);
       await page.locator('#next').click();
       assert.equal(await page.locator('#themeNote').inputValue(), otherNotes.theme[1]);
@@ -168,7 +168,7 @@ const otherNotes = { theme: ['themeNote', 'Homenagem ao avô & família'], place
     const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'no-preference' });
     const page = await context.newPage();
     await page.goto(base + '/quiz');
-    await page.locator('[data-start]').click();
+    await page.locator('[data-start]').first().click();
     for (const [key] of pathChoices) {
       await page.locator('input[name="' + key + '"]').first().check();
       await page.locator('#next').click();

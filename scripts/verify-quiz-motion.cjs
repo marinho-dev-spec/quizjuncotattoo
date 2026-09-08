@@ -76,7 +76,7 @@ fs.mkdirSync('docs', { recursive: true });
       await page.locator('.project-photo').first().click({ force: true });
       assert.equal(await page.locator('#dialog-count').innerText(), '1 / 6', 'tap on an actual project opens that photo');
       await page.locator('#dialog-close').click();
-      await page.locator('[data-start]').click();
+      await page.locator('[data-start]').first().click();
       assert.equal(await page.locator('#quiz').isVisible(), true);
       assert.equal(await page.locator('#studio-atmosphere').getAttribute('data-paused'), 'false');
       await page.waitForTimeout(450);
