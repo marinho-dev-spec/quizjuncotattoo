@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-08T13:17:05.097Z",
+  "date": "2026-09-08T13:23:32.820Z",
   "checks": [
     {
       "width": 390,
@@ -12,7 +12,11 @@
       "smallSymbols": "passed",
       "reducedMotion": "passed",
       "modal": "passed",
-      "quiz": "passed"
+      "quiz": "passed",
+      "sixReviews": "passed",
+      "reviewMotion": "passed",
+      "reviewTextFit": "passed",
+      "reviewSeamlessLoop": "passed"
     },
     {
       "width": 1440,
@@ -25,7 +29,11 @@
       "smallSymbols": "passed",
       "reducedMotion": "passed",
       "modal": "passed",
-      "quiz": "passed"
+      "quiz": "passed",
+      "sixReviews": "passed",
+      "reviewMotion": "passed",
+      "reviewTextFit": "passed",
+      "reviewSeamlessLoop": "passed"
     }
   ],
   "errors": []

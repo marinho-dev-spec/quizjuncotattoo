@@ -15,6 +15,15 @@ Nota exibida: **5,0**, em **664 avaliações**. A abertura informa a nota do est
 
 Os dois textos foram observados diretamente no Google. Não foram reaproveitados os depoimentos genéricos que constavam no componente Reviews do site. São 20 palavras citadas na abertura, com autores e indicação da origem.
 
+O carrossel também inclui quatro resumos, sem aspas e identificados como resumos, de avaliações lidas na mesma ficha em 08/09/2026:
+
+- William Lucas, 5 estrelas, “7 meses atrás”: elogia o ambiente acolhedor, a recepção e a atenção da equipe.
+- Felipe Rapetti Pires, 5 estrelas, “7 meses atrás”: relata duas tatuagens no mesmo dia, avaliação positiva da limpeza e resultado de acordo com o que imaginava.
+- Thais Magalhães, 5 estrelas, “2 meses atrás”: elogia atendimento, competência e experiência; o resumo não reproduz a observação pessoal sobre ausência de dor.
+- M. Henrique, 5 estrelas, “3 anos atrás”: relata acompanhar Gabriel por mais de cinco anos e satisfação com o resultado de seu projeto.
+
+São seis clientes distintos. A repetição visual da fileira serve somente ao ciclo contínuo de 110 segundos; a cópia fica oculta da árvore de acessibilidade. O movimento permanece automático quando visível e a preferência do sistema por movimento reduzido oferece navegação horizontal manual.
+
 ## Apresentação de Gabriel
 
 Base factual já publicada no site do cliente, em `lib/artistsData.ts` e `components/home/About.tsx`: Gabriel Junco é o fundador, tatua desde 2014, abriu o estúdio em Itapema em 2016 e trabalha com realismo preto e cinza. A redação em primeira pessoa é copy produzida para o cliente, não uma transcrição de depoimento.

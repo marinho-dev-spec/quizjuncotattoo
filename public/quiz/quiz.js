@@ -216,3 +216,27 @@ function initStudioAtmosphere() {
   sync();
 }
 initStudioAtmosphere();
+
+// A duplicated row makes the review carousel loop without a jump or extra requests.
+function initReviewCarousel() {
+  const carousel = document.querySelector('.reviews-carousel');
+  const viewport = carousel.querySelector('.reviews-viewport');
+  const track = carousel.querySelector('.reviews-track');
+  const clone = carousel.querySelector('.reviews-group').cloneNode(true);
+  clone.setAttribute('aria-hidden', 'true');
+  clone.inert = true;
+  track.append(clone);
+  carousel.dataset.enhanced = 'true';
+  let visible = false;
+  function syncVisibility() {
+    carousel.dataset.offscreen = String(!visible || document.hidden || $('intro').hidden);
+  }
+  new IntersectionObserver(entries => {
+    visible = entries[entries.length - 1].isIntersecting;
+    syncVisibility();
+  }).observe(viewport);
+  new MutationObserver(syncVisibility).observe($('intro'), { attributes: true, attributeFilter: ['hidden'] });
+  document.addEventListener('visibilitychange', syncVisibility);
+  syncVisibility();
+}
+initReviewCarousel();

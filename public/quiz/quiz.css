@@ -70,7 +70,7 @@ main{max-width:1340px;margin:auto;padding:0 48px}
 .artist-signature img{width:76px;height:76px}
 .artist-signature strong{display:block;font-size:21px;font-weight:600}
 .artist-signature span{display:block;color:var(--muted);font-size:16px;margin-top:3px}
-.intro-reviews{grid-area:reviews;display:grid;grid-template-columns:.9fr 1.6fr;gap:30px 50px;margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:24px}
+.intro-reviews{grid-area:reviews;display:grid;grid-template-columns:minmax(250px,.9fr) minmax(0,1.6fr);gap:30px 50px;margin-top:44px;padding-top:38px;border-top:1px solid var(--line);scroll-margin-top:24px}
 .reviews-introduction h2{font-size:32px;line-height:1.2;letter-spacing:-.7px;max-width:360px}
 .review-rating{display:flex;align-items:center;gap:14px;margin-top:22px}
 .review-rating>strong{font:500 42px/1 var(--heading);color:var(--paper);font-variant-numeric:tabular-nums}
@@ -78,10 +78,20 @@ main{max-width:1340px;margin:auto;padding:0 48px}
 .review-stars{display:flex;gap:4px}
 .google-reviews-link{font-size:16px;margin-top:9px}
 .google-reviews-link>.icon{width:17px;height:17px;flex-basis:17px;transform:rotate(-35deg)}
-.reviews-quotes{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
-.review-quote{margin:0;min-width:0}
-.review-quote blockquote{margin:0;font-size:23px;line-height:1.5;color:var(--paper)}
-.review-quote figcaption{margin-top:21px;font-size:17px}
+.reviews-carousel{min-width:0;container-type:inline-size}
+.reviews-viewport{overflow-x:auto;border-radius:12px}
+.reviews-viewport:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.reviews-track{display:flex;width:max-content}
+.reviews-group{display:flex;align-items:stretch;gap:18px;padding-right:18px;flex:none}
+.reviews-carousel[data-enhanced=true] .reviews-viewport{overflow:hidden}
+.reviews-carousel[data-enhanced=true] .reviews-track{animation:reviews-procession 110s linear infinite}
+.reviews-carousel[data-offscreen=true] .reviews-track{animation-play-state:paused}
+@keyframes reviews-procession{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.review-quote{display:flex;flex-direction:column;flex:none;width:min(340px,calc(100vw - 66px));width:min(340px,calc(100cqw - 22px));min-height:285px;margin:0;padding:25px;background:var(--surface);border-radius:12px}
+.review-score{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--gold);margin-bottom:20px}
+.review-score .review-star{width:16px;height:16px;flex-basis:16px}
+.review-quote blockquote,.review-summary{margin:0;font-size:21px;line-height:1.5;color:var(--paper)}
+.review-quote figcaption{margin-top:auto;padding-top:22px;font-size:17px}
 .review-quote figcaption strong{display:block;font-weight:600}
 .review-quote figcaption span{display:block;margin-top:3px;font-size:14px;color:var(--muted)}
 .reviews-next{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:4px;padding:26px 30px;background:var(--surface);border-radius:12px}
@@ -243,10 +253,9 @@ body[data-screen=quiz] .quiz-footer{display:none}
   .artist-signature img{width:64px;height:64px}.artist-signature strong{font-size:20px}.artist-signature span{font-size:14px}
   .intro-reviews{margin-top:28px;padding-top:29px;gap:27px}
   .reviews-introduction h2{font-size:29px;max-width:320px}
-  .reviews-quotes{grid-template-columns:1fr;gap:25px}
-  .review-quote+.review-quote{padding-top:25px;border-top:1px solid var(--line)}
-  .review-quote blockquote{font-size:22px}
-  .review-quote figcaption{margin-top:14px}
+  .review-quote{padding:23px;min-height:278px}
+  .review-quote blockquote,.review-summary{font-size:20px}
+  .review-quote figcaption{padding-top:20px}
   .reviews-next{flex-direction:column;gap:19px;padding:23px 20px}
   .reviews-next .button{width:100%;font-size:17px;padding-left:14px;padding-right:14px}
   .quiz{display:block;padding:3px 0 32px;min-height:0}
@@ -301,4 +310,6 @@ body[data-screen=quiz] .quiz-footer{display:none}
   .studio-atmosphere{display:none}
   .project-viewport{overflow-x:auto}
   .project-group[aria-hidden=true]{display:none}
+  .reviews-carousel[data-enhanced=true] .reviews-viewport{overflow-x:auto}
+  .reviews-group[aria-hidden=true]{display:none}
 }
