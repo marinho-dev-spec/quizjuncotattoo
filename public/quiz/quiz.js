@@ -10,16 +10,21 @@ const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)'
 const icon = name => `<svg class="icon" aria-hidden="true"><use href="#${name}"/></svg>`;
 
 function showSection(id) {
+  const previous = document.body.dataset.screen;
   for (const section of ['intro', 'quiz', 'result']) $(section).hidden = section !== id;
   document.body.dataset.screen = id;
+  if (previous && previous !== id && id !== 'quiz' && !reducedMotion()) {
+    $(id).animate([{ opacity: .6, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'cubic-bezier(.16,1,.3,1)' });
+  }
 }
 
 function focusHeading(element) {
   element.focus({ preventScroll: true });
-  window.scrollTo({ top: 0, behavior: reducedMotion() ? 'instant' : 'smooth' });
+  // Move before the entrance animates so the next question never glides past the reader.
+  window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-function fieldMarkup(key, label, { placeholder = '', optional = false, limit = 70, multiline = false, autocomplete = '' } = {}) {
+function fieldMarkup(key, label, { placeholder = '', optional = false, limit = 70, multiline = false, autocomplete = 'off' } = {}) {
   const attributes = `id="${key}" name="${key}" maxlength="${limit}" placeholder="${placeholder}" ${optional ? '' : 'required'} ${autocomplete ? `autocomplete="${autocomplete}"` : ''}`;
   return `<div class="field"><label class="field-label" for="${key}">${label}${optional ? ' <span>(opcional)</span>' : ''}</label>${multiline ? `<textarea ${attributes} rows="3"></textarea>` : `<input type="text" ${attributes}>`}</div>`;
 }
@@ -38,9 +43,10 @@ function renderStep(index) {
   showSection('quiz');
   document.body.dataset.step = step.key;
   $('step-label').textContent = `Etapa ${current + 1} de ${STEPS.length}`;
-  $('progress').max = STEPS.length;
-  $('progress').value = current + 1;
-  $('progress').textContent = `${current + 1} de ${STEPS.length}`;
+  $('progress').setAttribute('aria-valuemax', STEPS.length);
+  $('progress').setAttribute('aria-valuenow', current + 1);
+  $('progress').setAttribute('aria-valuetext', `Etapa ${current + 1} de ${STEPS.length}`);
+  $('progress').style.setProperty('--progress', (current + 1) / STEPS.length);
   heading.textContent = step.title;
   $('question-help').textContent = step.key === 'placement' && answers.project === 'cover'
     ? 'Escolha a região da tattoo que você quer cobrir. Depois, envie uma foto ao Gabriel para ele avaliar.'
@@ -50,10 +56,10 @@ function renderStep(index) {
   $('next').querySelector('span').textContent = current === STEPS.length - 1 ? 'Ver minha mensagem' : 'Continuar';
   let fields = '';
   if (step.options) {
-    fields = `<fieldset class="choice-grid ${step.compact ? 'compact-choices' : ''} ${step.options.length === 3 ? 'single-column' : ''}" aria-labelledby="question-title" aria-describedby="question-help">${step.options.map(option => `
+    fields = `<fieldset class="choice-grid ${step.images ? 'has-images' : ''} ${step.compact ? 'compact-choices' : ''} ${step.options.length === 3 ? 'single-column' : ''}" aria-labelledby="question-title" aria-describedby="question-help">${step.options.map(option => `
       <label class="choice ${step.images ? `choice-image ${option.image ? '' : 'no-photo'}` : ''}">
         <input type="radio" name="${step.key}" value="${option.value}" required>
-        <span class="choice-face">${option.image ? `<img src="/imagens-junco/thumbs/${option.image}" alt="${option.alt}" width="480" height="640" loading="lazy">` : option.icon ? icon(option.icon) : ''}<span class="choice-text"><strong>${option.label}</strong></span></span>
+        <span class="choice-face">${option.image ? `<img src="/imagens-junco/thumbs/${option.image}" alt="${option.alt}" width="480" height="640" loading="lazy" decoding="async">` : option.icon ? icon(option.icon) : ''}<span class="choice-text"><strong>${option.label}</strong></span></span>
       </label>`).join('')}</fieldset>`;
     if (step.other) fields += `<div id="conditional-field" hidden>${fieldMarkup(step.other.key, step.other.label, step.other)}</div>`;
   } else {
@@ -91,7 +97,6 @@ function collect(event) {
   }
 }
 form.addEventListener('input', collect);
-form.addEventListener('change', collect);
 
 function showError(error) {
   $('form-error').textContent = error.message;

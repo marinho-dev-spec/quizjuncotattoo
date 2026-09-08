@@ -1,0 +1,259 @@
+{
+  "date": "2026-09-08T15:23:22.364Z",
+  "engine": "chromium",
+  "states": [
+    {
+      "width": 390,
+      "height": 844,
+      "state": "intro",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "gallery",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "project",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "theme",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "references",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "placement",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "size",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "budget",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "timing",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "location",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "availability",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "details",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "result with long name and expanded answers",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "intro",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "gallery",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "project",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "theme",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "references",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "placement",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "size",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "budget",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "timing",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "location",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "availability",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "details",
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "result with long name and expanded answers",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "intro",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "gallery",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "project",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "theme",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "references",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "placement",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "size",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "budget",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "timing",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "location",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "availability",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "details",
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "result with long name and expanded answers",
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

@@ -4,6 +4,10 @@
   "buildCommand": "",
   "installCommand": "",
   "outputDirectory": "public",
+  "headers": [
+    { "source": "/imagens-junco/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }] },
+    { "source": "/quiz/fonts/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }] }
+  ],
   "rewrites": [
     { "source": "/", "destination": "/quiz/index.html" },
     { "source": "/quiz", "destination": "/quiz/index.html" }

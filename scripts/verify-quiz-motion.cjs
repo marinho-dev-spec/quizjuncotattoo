@@ -45,11 +45,12 @@ fs.mkdirSync('docs', { recursive: true });
       assert.equal(await track.evaluate(el => getComputedStyle(el).animationTimingFunction), 'linear');
       const geometry = await page.locator('.project-photo img').first().evaluate(img => {
         const rect = img.getBoundingClientRect();
-        return { ratio: rect.width / rect.height, natural: img.naturalWidth / img.naturalHeight, fit: getComputedStyle(img).objectFit, transform: getComputedStyle(img).transform, width: rect.width, viewport: document.querySelector('#project-viewport').clientWidth };
+        return { ratio: rect.width / rect.height, natural: img.naturalWidth / img.naturalHeight, naturalHeight: img.naturalHeight, fit: getComputedStyle(img).objectFit, transform: getComputedStyle(img).transform, width: rect.width, viewport: document.querySelector('#project-viewport').clientWidth };
       });
       assert.equal(geometry.fit, 'contain');
       assert.equal(geometry.transform, 'none');
-      assert.ok(Math.abs(geometry.ratio - geometry.natural) < .001, 'full original photo proportions');
+      // Responsive srcset reports density-adjusted integer dimensions: allow one rounded pixel.
+      assert.ok(geometry.naturalHeight > 0 && Math.abs(geometry.ratio - geometry.natural) <= 1 / geometry.naturalHeight, 'full original photo proportions');
       assert.ok(geometry.width < geometry.viewport, 'each photograph fits fully inside the strip');
       await page.locator('#project-viewport').hover();
       const onHover = await track.evaluate(el => getComputedStyle(el).transform);

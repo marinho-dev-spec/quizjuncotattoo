@@ -18,8 +18,8 @@ let opener;
 let previousOverflow = '';
 let visible = false;
 
-function photo(element, project, thumbnail = false) {
-  const src = '/imagens-junco/' + (thumbnail ? 'thumbs/' : '') + project.file;
+function photo(element, project, variant = '') {
+  const src = '/imagens-junco/' + variant + project.file;
   if (element.getAttribute('src') !== src) element.src = src;
   element.alt = project.alt;
 }
@@ -27,8 +27,8 @@ function photo(element, project, thumbnail = false) {
 export function setProjectForTheme(theme) {
   asideIndex = ({ mythology: 0, animal: 1, religious: 2, portrait: 3, other: 4, undecided: 5 })[theme] ?? 0;
   const project = projects[asideIndex];
-  photo($('aside-photo'), project);
-  photo($('mobile-project-photo'), project, true);
+  photo($('aside-photo'), project, 'medium/');
+  photo($('mobile-project-photo'), project, 'thumbs/');
   $('mobile-project-photo').alt = '';
   $('aside-caption').textContent = project.caption;
 }
@@ -46,7 +46,7 @@ for (const [index, project] of projects.entries()) {
   image.loading = 'lazy'; image.decoding = 'async'; image.draggable = false;
   // Declare selection hints first so a thumbnail request is not canceled for srcset.
   image.sizes = '(max-width: 760px) calc(100vw - 72px), 380px';
-  image.srcset = '/imagens-junco/thumbs/' + project.file + ' 480w, /imagens-junco/' + project.file + ' 1400w';
+  image.srcset = '/imagens-junco/thumbs/' + project.file + ' 640w, /imagens-junco/medium/' + project.file + ' 800w';
   image.src = '/imagens-junco/thumbs/' + project.file;
   const caption = document.createElement('span');
   caption.textContent = project.caption;
@@ -56,7 +56,7 @@ for (const [index, project] of projects.entries()) {
 // Two identical groups form one continuous loop, like the site's portfolio.
 const duplicate = group.cloneNode(true);
 duplicate.setAttribute('aria-hidden', 'true');
-duplicate.querySelectorAll('img').forEach(image => { image.alt = ''; image.removeAttribute('fetchpriority'); });
+duplicate.querySelectorAll('img').forEach(image => { image.alt = ''; image.loading = 'lazy'; image.removeAttribute('fetchpriority'); });
 track.append(duplicate);
 track.querySelectorAll('img').forEach(image => image.addEventListener('error', () => {
   if (image.dataset.fallback) {
@@ -88,6 +88,10 @@ function showDialogPhoto(index) {
   photo($('dialog-image'), project);
   $('dialog-caption').textContent = project.caption;
   $('dialog-count').textContent = (dialogIndex + 1) + ' / ' + projects.length;
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    $('dialog-image').getAnimations().forEach(animation => animation.cancel());
+    $('dialog-image').animate([{ opacity: .55 }, { opacity: 1 }], { duration: 200, easing: 'ease-out' });
+  }
 }
 function openPhoto(index, trigger) {
   opener = trigger;

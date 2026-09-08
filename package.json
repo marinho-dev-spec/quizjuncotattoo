@@ -9,6 +9,8 @@
     "test": "node scripts/test-quiz.mjs",
     "test:browser": "node scripts/verify-quiz.cjs",
     "test:motion": "node scripts/verify-quiz-motion.cjs",
+    "test:ux": "node scripts/verify-quiz-ux.cjs",
+    "test:performance": "node scripts/measure-quiz.cjs after",
     "test:pixel": "node scripts/verify-meta-pixel.cjs"
   },
   "engines": { "node": ">=22" },

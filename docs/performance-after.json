@@ -1,0 +1,183 @@
+{
+  "date": "2026-09-08T15:26:53.817Z",
+  "environment": "Local Chromium, cold cache, 1.6 Mbps download, 150 ms latency, 4x CPU slowdown; laboratory measurements, not real-user Core Web Vitals.",
+  "runs": [
+    {
+      "width": 390,
+      "lcp": 1232,
+      "cls": 0,
+      "blockingMs": 0,
+      "lcpElement": "P.intro-lead",
+      "fcp": 1232,
+      "resources": [
+        {
+          "path": "/quiz/fonts/manrope-latin.woff2",
+          "bytes": 24576,
+          "duration": 841
+        },
+        {
+          "path": "/quiz/fonts/source-sans-3-latin.woff2",
+          "bytes": 28792,
+          "duration": 918
+        },
+        {
+          "path": "/quiz/quiz.css",
+          "bytes": 26067,
+          "duration": 885
+        },
+        {
+          "path": "/quiz/meta-pixel.js",
+          "bytes": 1708,
+          "duration": 792
+        },
+        {
+          "path": "/quiz/quiz.js",
+          "bytes": 12356,
+          "duration": 548
+        },
+        {
+          "path": "/junco-mark-192.png",
+          "bytes": 22444,
+          "duration": 821
+        },
+        {
+          "path": "/imagens-junco/gabriel-junco-228.webp",
+          "bytes": 10632,
+          "duration": 1091
+        },
+        {
+          "path": "/imagens-junco/medium/tattoo-16.webp",
+          "bytes": 31010,
+          "duration": 917
+        },
+        {
+          "path": "/quiz/quiz-model.mjs",
+          "bytes": 8202,
+          "duration": 443
+        },
+        {
+          "path": "/quiz/quiz-gallery.mjs",
+          "bytes": 7029,
+          "duration": 503
+        },
+        {
+          "path": "/imagens-junco/thumbs/tattoo-16.webp",
+          "bytes": 24220,
+          "duration": 441
+        },
+        {
+          "path": "/imagens-junco/medium/tattoo-15.webp",
+          "bytes": 35552,
+          "duration": 594
+        },
+        {
+          "path": "/imagens-junco/medium/tattoo-18.webp",
+          "bytes": 35276,
+          "duration": 581
+        },
+        {
+          "path": "/junco-mark-192.png",
+          "bytes": 22444,
+          "duration": 275
+        }
+      ],
+      "transferBytes": 290308,
+      "frames": {
+        "frames": 361,
+        "over50ms": 0,
+        "p95ms": 5.600000000000364
+      }
+    },
+    {
+      "width": 1440,
+      "lcp": 1216,
+      "cls": 0,
+      "blockingMs": 18,
+      "lcpElement": "IMG.",
+      "fcp": 1216,
+      "resources": [
+        {
+          "path": "/quiz/fonts/manrope-latin.woff2",
+          "bytes": 24576,
+          "duration": 829
+        },
+        {
+          "path": "/quiz/fonts/source-sans-3-latin.woff2",
+          "bytes": 28792,
+          "duration": 904
+        },
+        {
+          "path": "/quiz/quiz.css",
+          "bytes": 26067,
+          "duration": 888
+        },
+        {
+          "path": "/quiz/meta-pixel.js",
+          "bytes": 1708,
+          "duration": 779
+        },
+        {
+          "path": "/quiz/quiz.js",
+          "bytes": 12356,
+          "duration": 543
+        },
+        {
+          "path": "/junco-mark-192.png",
+          "bytes": 22444,
+          "duration": 841
+        },
+        {
+          "path": "/imagens-junco/gabriel-junco-228.webp",
+          "bytes": 10632,
+          "duration": 1063
+        },
+        {
+          "path": "/imagens-junco/thumbs/tattoo-16.webp",
+          "bytes": 24220,
+          "duration": 864
+        },
+        {
+          "path": "/quiz/quiz-model.mjs",
+          "bytes": 8202,
+          "duration": 437
+        },
+        {
+          "path": "/quiz/quiz-gallery.mjs",
+          "bytes": 7029,
+          "duration": 508
+        },
+        {
+          "path": "/imagens-junco/medium/tattoo-16.webp",
+          "bytes": 31010,
+          "duration": 508
+        },
+        {
+          "path": "/imagens-junco/thumbs/tattoo-15.webp",
+          "bytes": 28002,
+          "duration": 637
+        },
+        {
+          "path": "/imagens-junco/thumbs/tattoo-18.webp",
+          "bytes": 27218,
+          "duration": 653
+        },
+        {
+          "path": "/imagens-junco/thumbs/tattoo-26.webp",
+          "bytes": 31776,
+          "duration": 684
+        },
+        {
+          "path": "/junco-mark-192.png",
+          "bytes": 22444,
+          "duration": 283
+        }
+      ],
+      "transferBytes": 306476,
+      "frames": {
+        "frames": 361,
+        "over50ms": 0,
+        "p95ms": 5.699999999999818
+      }
+    }
+  ]
+}

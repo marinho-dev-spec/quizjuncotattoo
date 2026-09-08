@@ -1,0 +1,178 @@
+{
+  "date": "2026-09-08T15:18:17.451Z",
+  "environment": "Local Chromium, cold cache, 1.6 Mbps download, 150 ms latency, 4x CPU slowdown; laboratory measurements, not real-user Core Web Vitals.",
+  "runs": [
+    {
+      "width": 390,
+      "lcp": 1196,
+      "cls": 0.0022960077355997084,
+      "blockingMs": 0,
+      "lcpElement": "P.intro-lead",
+      "fcp": 1196,
+      "resources": [
+        {
+          "path": "/quiz/fonts/manrope-latin.woff2",
+          "bytes": 24576,
+          "duration": 818
+        },
+        {
+          "path": "/quiz/quiz.css",
+          "bytes": 24329,
+          "duration": 787
+        },
+        {
+          "path": "/quiz/meta-pixel.js",
+          "bytes": 1708,
+          "duration": 238
+        },
+        {
+          "path": "/quiz/quiz.js",
+          "bytes": 11846,
+          "duration": 492
+        },
+        {
+          "path": "/junco-mark-192.png",
+          "bytes": 22444,
+          "duration": 802
+        },
+        {
+          "path": "/imagens-junco/gabriel-junco.jpg",
+          "bytes": 67051,
+          "duration": 1775
+        },
+        {
+          "path": "/imagens-junco/tattoo-16.webp",
+          "bytes": 97256,
+          "duration": 2110
+        },
+        {
+          "path": "/quiz/quiz-model.mjs",
+          "bytes": 8202,
+          "duration": 375
+        },
+        {
+          "path": "/quiz/quiz-gallery.mjs",
+          "bytes": 6754,
+          "duration": 566
+        },
+        {
+          "path": "/quiz/fonts/source-sans-3-latin.woff2",
+          "bytes": 28792,
+          "duration": 771
+        },
+        {
+          "path": "/imagens-junco/tattoo-15.webp",
+          "bytes": 136154,
+          "duration": 2121
+        },
+        {
+          "path": "/imagens-junco/tattoo-18.webp",
+          "bytes": 119410,
+          "duration": 1961
+        },
+        {
+          "path": "/imagens-junco/tattoo-26.webp",
+          "bytes": 120332,
+          "duration": 1214
+        },
+        {
+          "path": "/junco-mark-192.png",
+          "bytes": 22444,
+          "duration": 288
+        }
+      ],
+      "transferBytes": 691298,
+      "frames": {
+        "frames": 361,
+        "over50ms": 0,
+        "p95ms": 5.699999999999818
+      }
+    },
+    {
+      "width": 1440,
+      "lcp": 2352,
+      "cls": 0.0033884422476787857,
+      "blockingMs": 0,
+      "lcpElement": "IMG.",
+      "fcp": 1204,
+      "resources": [
+        {
+          "path": "/quiz/fonts/manrope-latin.woff2",
+          "bytes": 24576,
+          "duration": 812
+        },
+        {
+          "path": "/quiz/quiz.css",
+          "bytes": 24329,
+          "duration": 827
+        },
+        {
+          "path": "/quiz/meta-pixel.js",
+          "bytes": 1708,
+          "duration": 246
+        },
+        {
+          "path": "/quiz/quiz.js",
+          "bytes": 11846,
+          "duration": 512
+        },
+        {
+          "path": "/junco-mark-192.png",
+          "bytes": 22444,
+          "duration": 796
+        },
+        {
+          "path": "/imagens-junco/gabriel-junco.jpg",
+          "bytes": 67051,
+          "duration": 1850
+        },
+        {
+          "path": "/imagens-junco/tattoo-16.webp",
+          "bytes": 97256,
+          "duration": 2105
+        },
+        {
+          "path": "/quiz/quiz-model.mjs",
+          "bytes": 8202,
+          "duration": 374
+        },
+        {
+          "path": "/quiz/quiz-gallery.mjs",
+          "bytes": 6754,
+          "duration": 551
+        },
+        {
+          "path": "/quiz/fonts/source-sans-3-latin.woff2",
+          "bytes": 28792,
+          "duration": 810
+        },
+        {
+          "path": "/imagens-junco/thumbs/tattoo-15.webp",
+          "bytes": 28002,
+          "duration": 881
+        },
+        {
+          "path": "/imagens-junco/thumbs/tattoo-18.webp",
+          "bytes": 27218,
+          "duration": 896
+        },
+        {
+          "path": "/imagens-junco/thumbs/tattoo-26.webp",
+          "bytes": 31776,
+          "duration": 959
+        },
+        {
+          "path": "/junco-mark-192.png",
+          "bytes": 22444,
+          "duration": 292
+        }
+      ],
+      "transferBytes": 402398,
+      "frames": {
+        "frames": 361,
+        "over50ms": 0,
+        "p95ms": 5.699999999999818
+      }
+    }
+  ]
+}

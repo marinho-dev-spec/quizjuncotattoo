@@ -22,6 +22,8 @@ Execute `npm install`, `npx playwright install chromium` e `npm test`. Com a pr�
 
 Os testes verificam o fluxo completo em sete larguras, acessibilidade automática, fotos, carrossel, animação, edição e composição da mensagem. Não enviam mensagens no WhatsApp.
 
+`npm run test:ux` revisa todas as etapas e opções, horizontal, texto longo e espaço de teclado. Para testar também com o motor WebKit, execute `npx playwright install webkit` e defina `QUIZ_ENGINE=webkit` ao rodar esse teste. `npm run test:performance` mede a página local com rede e CPU limitadas; resultados e escopo estão em `docs/auditoria-mobile-performance.md`.
+
 `QUIZ_BASE_URL` permite testar outra URL. `PLAYWRIGHT_MODULE`, `CHROME_PATH` e `AXE_PATH` permitem usar um navegador e bibliotecas já instalados.
 
 ## Publicação

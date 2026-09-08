@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-08T13:23:41.840Z",
+  "date": "2026-09-08T15:21:51.285Z",
   "viewports": [
     {
       "width": 320,
@@ -146,7 +146,12 @@
   ],
   "errors": [],
   "failedResources": [],
-  "canceledRequests": [],
+  "canceledRequests": [
+    {
+      "url": "http://127.0.0.1:3002/imagens-junco/tattoo-16.webp",
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
   "outboundRequests": [],
   "screenshots": [
     ".cache/quiz-390-intro.png",
