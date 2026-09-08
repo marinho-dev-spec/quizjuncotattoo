@@ -8,7 +8,8 @@
     "start": "node scripts/serve.mjs",
     "test": "node scripts/test-quiz.mjs",
     "test:browser": "node scripts/verify-quiz.cjs",
-    "test:motion": "node scripts/verify-quiz-motion.cjs"
+    "test:motion": "node scripts/verify-quiz-motion.cjs",
+    "test:pixel": "node scripts/verify-meta-pixel.cjs"
   },
   "engines": { "node": ">=22" },
   "devDependencies": {
